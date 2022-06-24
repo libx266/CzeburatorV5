@@ -1,0 +1,37 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450" MinWidth="800" MinHeight="450"
+        x:Class="CzeburatorV5.MainWindow"
+        Title="CzeburatorV5">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="30"/>
+			<RowDefinition/>
+			<RowDefinition Height="35"/>
+		</Grid.RowDefinitions>
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition Width="128"/>
+			</Grid.ColumnDefinitions>
+			<TextBox Name="TbPassword" Grid.Column="0" Foreground="White" Background="Black" FontSize="18"/>
+			<ComboBox Name="CbRabbit" Width="128" Grid.Column="1" >
+				<ComboBox.ItemTemplate>
+					<DataTemplate>
+						<Image Height="64" Width="96" Source="{Binding}"/>
+					</DataTemplate>
+				</ComboBox.ItemTemplate>
+			</ComboBox>
+			<ComboBox Name="CbRabbitString" Width="128" IsVisible="False" Grid.Column="1"/>
+		</Grid>
+		<TextBox Grid.Row="1" Name="TbMain" />
+		<UniformGrid Columns="4" Grid.Row="2">
+			<Button Content="Зашифровать текст" Name="BtEncode" />
+			<Button Content="Расшифровать кролика" Name="BtDecode"/>
+			<Button Content="Пакетная обработка" Name="BtBatch"/>
+			<Button Content="Текстовый движок" Name="BtTextEngine"/>
+		</UniformGrid>
+	</Grid>
+</Window>

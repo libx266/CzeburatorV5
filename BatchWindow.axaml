@@ -1,0 +1,28 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="300"
+        x:Class="CzeburatorV5.BatchWindow"
+        Title="BatchWindow">
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="30"/>
+			<RowDefinition Height="74"/>
+			<RowDefinition/>
+			<RowDefinition Height="35"/>
+		</Grid.RowDefinitions>
+		<TextBox Name="TbPassword" Foreground="White" Background="Black" FontSize="18"/>
+		<UniformGrid Grid.Row="3" Columns="2">
+			<Button Name="BtEncode" Content="Зашифровать"/>
+			<Button Name="BtDecode" Content="Расшифровать"/>
+		</UniformGrid >
+		<StackPanel Margin="2,8,2,0" Grid.Row="1">
+			<TextBlock Text="Название серии:"/>
+			<TextBox Name="TbName" />
+			<ProgressBar  Margin="0,4,0,4" Name="PbProgress" Height="8" Foreground="#CCC"/>
+		</StackPanel>
+		<TextBox Name="TbLog" IsReadOnly="True" TextWrapping="Wrap" Margin="1,0,1,6" Grid.Row="2"/>
+	</Grid>
+</Window>
